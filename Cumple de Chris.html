@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños, Christian!</title>
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #ff6f61;
+        }
+        p {
+            font-size: 18px;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #ff6f61;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+        }
+        .button:hover {
+            background-color: #ff4c3b;
+        }
+        #imagenes-container {
+            margin-top: 20px;
+        }
+        img {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Feliz Cumpleaños, Christian!</h1>
+        <p>Felizz cumpleee paaaa</p>
+        <p>que la pases re bien</p>
+        <p>y para que algun dia estes tan desproporcionado como yo.</p>
+        <button class="button" onclick="mostrarImagenes()">Fotos random que encontre de vos y yo lol</button>
+        <div id="imagenes-container"></div>
+    </div>
+
+    <script>
+        function mostrarImagenes() {
+            const imagenes = [
+            "https://i.postimg.cc/X7nmGPDc/Whats-App-Image-2025-02-07-at-12-20-17-PM.jpg",
+            "https://i.postimg.cc/JnJvZCLK/Whats-App-Image-2025-02-07-at-12-20-17-PM-1.jpg",
+            "https://i.postimg.cc/W1HHy1pX/Whats-App-Image-2025-02-07-at-12-20-18-PM.jpg",
+            "https://i.postimg.cc/g2J74Zpx/Whats-App-Image-2025-02-07-at-12-20-18-PM-1.jpg"
+            ];
+
+            const contenedor = document.getElementById("imagenes-container");
+            contenedor.innerHTML = ""; // Limpiar antes de agregar nuevas imágenes
+
+            imagenes.forEach(url => {
+                const img = document.createElement("img");
+                img.src = url;
+                img.alt = "Imagen de cumpleaños";
+                contenedor.appendChild(img);
+            });
+        }
+    </script>
+</body>
+</html>
